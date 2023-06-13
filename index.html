@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0FLVX7GFE"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-S0FLVX7GFE');
+	</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="KDD Cup 2022 Workshop: The primary objective of this competition is to build new ranking strategies and, simultaneously, identify interesting categories of results (i.e., substitutes) that can be used to improve the customer experience when searching for products." />
+        <meta name="author" content="Nurendra Choudhary" />
+        <title>KDD Cup 2023 Workshop: Multilingual Session Recommendation Challenge</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#" style="font-size:x-large;">
+                    <img src="assets/amz_logo.png" height="30" alt="">
+                    <!-- &nbsp;&nbsp;<span><i class="fa-brands fa-amazon"></i></span> -->
+                </a>    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav nav-pills ms-auto" style="font-size:medium; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#intro" >INTRODUCTION</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#program">PROGRAM</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#submission">SUBMISSION GUIDELINES</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#dates">DATES</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#papers">ACCEPTED PAPERS</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#organizers">ORGANIZERS</a></li>&nbsp;&nbsp;
+                        <li class="nav-item"><a class="nav-link" style="color:white;" href="#data">DATA</a></li>&nbsp;&nbsp;
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="text-white" style="background:transparent url('assets/opener.jpeg') no-repeat center center /cover; opacity: 0.7;">
+            <div class="container px-4 text-center" 
+            style="background: rgba(0, 0, 0, 0.8); font-size:medium; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                <h1 class="fw-bolder" style="color:ivory;">KDD Cup 2023 Workshop:</h1>
+                <h2 class="fw-bolder">Multilingual Session Recommendation Challenge</h2>
+                <p>Held in conjunction with <a style="color:#e77725;" href="https://kdd.org/kdd2023/">KDD'23</a>
+                    Aug 6th, 2023 - Long Beach, CA, USA</p>
+            </div>
+        </header>
+        <!-- Intro section-->
+        <section style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="intro">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">INTRODUCTION</h2>
+                        <p style="text-align: justify;">
+                            The objective of this workshop is to discuss the winning submissions of the 
+                            KDDCup 2023 Challenge on Multilingual Session Recommendation Challenge. In this challenge, we introduce the “Shopping Session Data Set”, 
+                            a collection of anonymized customer sessions containing products from six different locales: English, German, Japanese, French, Italian, and Spanish, 
+                            published with the aim of encouraging the development of multilingual recommendation systems, which can enhance personalization and understanding of global trends and preferences.  
+                            For each session, the dataset provides a list of product IDs (Amazon ASIN numbers) interacted by the current user, together with the additional product features.
+                            More details of this challenge are available here; <a href="https://www.aicrowd.com/challenges/amazon-kdd-cup-23-multilingual-recommendation-challenge">https://www.aicrowd.com/challenges/amazon-kdd-cup-23-multilingual-recommendation-challenge</a>.
+                        <!-- </p> -->
+                        <br>
+                        <h3>Objective and Tasks</h3>
+                        The primary objective of this competition is to build new session recommender system which understands the 
+                        shopping intentions and improves the shopping experimence of worldwide customers from different locales.
+                        The three different tasks for this KDD Cup competition using the Shopping Session Dataset are:<br/>
+                        <ol>
+                            <li><b>Next Product Recommendation:</b> Given a session data and the attributes of each product, the goal of this task is to predict the next product that a customer is likely to engage with. The test set for Task 1 comprises data from popular locales, i.e., English, German, and Japanese locales. </li>
+                            <li><b>Next Product Recommendation for Underrepresented Languages/Locales:</b> The goal of this task is similar to Task1 while the test set is constructed from the underepresented locales, i.e., French, Italian, and Spanish.</li>
+                            <li><b>Next Product Title Generation:</b> Given a session data and the attributes of each product, the goal of this task is to predict the title of the next product that a customer will engage with. Unlike Tasks 1 and 2, which focus on recommending existing products, predicting new or "cold-start" products presents a unique challenge.</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Program section-->
+        <section class="bg-light" style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="program">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">SCHEDULE</h2>
+                        <p style="text-align: center;">August 17th, 2022, 1.15PM–5PM (Eastern Standard Time), Washington D.C., USA.</p>
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><span><i class="fas fa-book-open" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Opening</h5>
+                                    <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;1:15-1:40 PM</h5>
+                                  </div>
+                                  <p class="mb-1">
+                                    Introduction by organizers.&nbsp;&nbsp;
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="window.open('slides/KDDCup.pdf')">Slides</button>
+                                  </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><span><i class="fas fa-bars-progress" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Task 1: Next Product Recommendation</h5>
+                                    <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;1:40-2:20 PM</h5>
+                                  </div>
+                                  <p class="mb-1">
+                                    <ul>
+                                        <li>title</li>
+                                        <li>title</li>
+                                        <li>title</li>
+                                        <li>title</li>
+                                        <!-- <li>Short presentations by other winners (15 mins)</li> -->
+                                    </ul>
+                                  </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-bars-progress" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Task 2 and 3: Next Product Recommendation for Underrepresented Languages/Locales
+                                        & Next Product Title Generation</h5>
+                                      <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;2:20-3:00 PM</h5>
+                                    </div>
+                                    <p class="mb-1">
+                                        <ul>
+                                            <li>title</li>
+                                            <li>title</li>
+                                            <li>title</li>
+                                            <li>title</li>
+                                        </ul>
+                                    </p>
+                                  </a>
+                                <a class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><span><i class="fa-solid fa-mug-hot" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Coffee Break</h5>
+                                    <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;3:00-3:30 PM</h5>
+                                  </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fa-solid fa-signs-post" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Poster Session</h5>
+                                      <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;3:30-4:00 PM</h5>
+                                    </div>
+                                  </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-bars-progress" style="color:#0275d8;"></i></span>&nbsp;&nbsp;All Tasks: Interesting Approaches</h5>
+                                      <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;4:00-4:50 PM</h5>
+                                    </div>
+                                    <p class="mb-1">
+                                        <ul>
+                                            <li>TFKD Solution for KDD Cup 2022 Amazon Product Search</li>
+                                            <li>A Boring-yet-effective Approach for the Product Ranking Task of the Amazon KDD Cup 2022</li>
+                                            <li>CMB AI Lab at KDD Cup 2022 ESCI Task2 and Task3: A Domain Adapted PLM with Context Enhancement for Query-Product Classification</li>
+                                            <li>A Multi-model Fusion Approach for Product Classification and Product Substitute Identification on Shopping Queries Data</li>
+                                            <li>KDD Cup 2022 Multiclass Product Classification: Team MetaSoul Solution</li>
+                                            <li>Predicting Query-Item Relationship using Adversarial Training and Robust Modeling Techniques</li>
+                                        </ul>
+                                     </p>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-book" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Closing</h5>
+                                      <h5><span><i class="fas fa-clock" style="color:#0275d8;"></i></span>&nbsp;&nbsp;4:50-5:00 PM</h5>
+                                    </div>
+                                    <p class="mb-1">Concluding remarks by organizers.</p>
+                                </a>
+                            </div>             
+                </div>
+            </div>
+        </section>
+        <!-- Submission Guidelines section-->
+        <section style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="submission">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">SUBMISSION GUIDELINES</h2>
+                        <p style="text-align: justify;">
+                            The objective of this workshop is to discuss the winning submissions of the 
+                            Submissions to the Amazon KDD Cup 2023 is <b>single</b>-blind (author names and affiliations should be listed). 
+                            <b>Everyone in the Top-10 leaderboard submissions will have a guaranteed opportunity for an in-person oral/poster presentation.</b>
+                            Other submissions will be evaluated by a committee based on their novelty and insights. 
+                            The deadline for the submissions is <b>TODO</b> (Anywhere on Earth time). 
+                            Accepted submissions will be notified latest by TODO August 7th, 2022. 
+                            Please note that the KDD Cup workshop will have <b>no proceedings</b> and the authors retain <b>full rights</b> to submit or post the paper at any other venue.
+                        <!-- </p> -->
+                        <br>
+                        Link to the submission website: <a href="https://easychair.org/conferences/?conf=amazonkddcup2022">https://easychair.org/conferences/?conf=amazonkddcup2022</a>
+                        </p>
+                        Submissions are limited to a maximum of four (4) pages, including all content and references, and must be in PDF format. 
+                        Please use ACM Conference templates (two column format). One recommended setting for Latex file is: <code>\documentclass[sigconf, review]{acmart}</code>. 
+                        Template guidelines are here: <a href="https://www.acm.org/publications/proceedings-template">https://www.acm.org/publications/proceedings-template</a>. 
+                        <br>
+                        <p style="text-align: justify;">
+                        In addition, authors can provide an optional one page supplement at the end of their submitted paper (it needs to be in the same PDF file) 
+                        focused on reproducibility. After the submission deadline, the names and order of authors cannot be changed. 
+                        The paper organization can loosely follow the following format:
+                        <ul>
+                            Paper Title and Author Details
+                            <li>Abstract</li>
+                            <li>Introduction</li>
+                            <li>Related Work</li>
+                            <li>Model Architecture</li>
+                            <li>Results</li>
+                            <li>Discussion</li>
+                            <li>Conclusion</li>
+                            <li>References</li>
+                            
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Submission Dates section-->
+        <section class="bg-light" style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="dates">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">SUBMISSION DATES</h2>
+                        <p style="text-align: center;">Link to the submission website: <a href="https://easychair.org/conferences/?conf=amazonkddcup2022">https://easychair.org/conferences/?conf=amazonkddcup2022</a><br>
+                            <!-- All deadlines are given in Anywhere on Earth time. -->
+                        </p>
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><span><i class="fas fa-book-open" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Submission Site Opens</h5>
+                                    <h5><span><i class="fas fa-calendar" style="color:#0275d8;"></i></span>&nbsp;&nbsp;July 26th, 2022 (AoE Time)</h5>
+                                  </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                  <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><span><i class="fas fa-bars-progress" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Community Town Hall Event</h5>
+                                    <h5><span><i class="fas fa-calendar" style="color:#0275d8;"></i></span>&nbsp;&nbsp;July 29th, 2022 9AM EST</h5>
+                                  </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-book" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Paper Submission Deadline</h5>
+                                      <h5><span><i class="fas fa-calendar" style="color:#0275d8;"></i></span>&nbsp;&nbsp;July 31st, 2022 (AoE Time)</h5>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-circle-check" style="color:#0275d8;"></i></span>&nbsp;&nbsp;Paper Acceptance Notification</h5>
+                                      <h5><span><i class="fas fa-calendar" style="color:#0275d8;"></i></span>&nbsp;&nbsp;August 7th, 2022 (AoE Time)</h5>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                      <h5 class="mb-1"><span><i class="fas fa-calendar-check" style="color:#0275d8;"></i></span>&nbsp;&nbsp;KDDCup Workshop Event</h5>
+                                      <h5><span><i class="fas fa-calendar" style="color:#0275d8;"></i></span>&nbsp;&nbsp;August 17th, 2022 1PM EST</h5>
+                                    </div>
+                                </a>
+                            </div>             
+                </div>
+            </div>
+        </section>        
+        <!-- Accepted papers section-->
+        <section style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="papers">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">ACCEPTED PAPERS</h2>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action">
+                                <h6>A Winning Solution of KDD CUP 2022 ESCI Challenge for Improving Product Search</h6>
+                                &nbsp;<span class="badge alert-success"><i class="fas fa-trophy"></i> Task 1</span>
+                                &nbsp;<span class="badge alert-danger"><i class="fas fa-trophy"></i> Task 2</span> 
+                                &nbsp;<span class="badge alert-warning"><i class="fas fa-trophy"></i> Task 3</span><br>                                
+                                Authors: Jinzhen Lin, Lanqing Xue, Zhenzhe Ying, Changhua Meng, Weiqiang Wang, Haotian Wang and Xiaofeng Wu.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/3782.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/3782.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/Q-rxLkqVwsM" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>      <br> 
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>Some Practice for Improving the Search Results of E-commerce</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span>
+                                &nbsp;<span class="badge alert-danger"><i class="fas fa-trophy"></i> Task 2</span> 
+                                &nbsp;<span class="badge alert-warning"><i class="fas fa-trophy"></i> Task 3</span><br>                                
+                                Authors: Fanyou Wu, Yang Liu, Rado Gazo, Benes Bedrich and Xiaobo Qu.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/8572.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="https://github.com/wufanyou/KDD-Cup-2022-Amazon" class="btn btn-secondary" role="button" target="_blank">Code</a>
+                                    <a href="slides/8572.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/8572.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/Ie9ZBKy-bpc" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>        <br>
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>Multiclass Product Classification Based On Multilingual Model and LightGBM (Team:Uni)</h6>
+                                &nbsp;<span class="badge alert-danger"><i class="fas fa-trophy"></i> Task 2</span> 
+                                &nbsp;<span class="badge alert-warning"><i class="fas fa-trophy"></i> Task 3</span><br>                                
+                                Authors: Peng Zhang, Linghan Zheng, Ruiqing Yan, Changyu Li, Rui Hu, Sheng Zhou, Jinrong Jiang, Lian Zhao, Qianjin Guo and Qiang Liu.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/1470.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/1470.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/C8O3av_X35c" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>          <br>                                                
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>A Semantic Alignment System for Multilingual Query-Product Retrieval</h6>
+                                &nbsp;<span class="badge alert-success"> <i class="fas fa-trophy"></i> Task 1</span><br>
+                                Authors: Qi Zhang, Zijian Yang, Yilun Huang, Ze Chen, Zijian Cai, Kangxu Wang, Jiewen Zheng, Jiarong He and Jin Gao.                                                             
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/9517.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/9517.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/9517.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/j7Opry8BsUM" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>      <br>
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>Second place solution of Amazon KDD Cup 2022: ESCI Challenge for Improving Product Search</h6>
+                                &nbsp;<span class="badge alert-success"><i class="fas fa-trophy"></i> Task 1</span>
+                                &nbsp;<span class="badge alert-danger">Task 2</span> 
+                                &nbsp;<span class="badge alert-warning">Task 3</span><br>
+                                Authors: Xiaolei Qin, Nan Liang, Hongbo Zhang, Wuhe Zou and Weidong Zhang.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/8408.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/8408.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/8408.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/x4E4XaJiBio" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>          <br>                 
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>ZhichunRoad at Amazon KDD Cup 2022: MultiTask Pre-Training for E-Commerce Product Search</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span>
+                                &nbsp;<span class="badge alert-danger">Task 2</span> 
+                                &nbsp;<span class="badge alert-warning">Task 3</span><br>                                
+                                Authors: Xuange Cui, Wei Xiong and Songlin Wang.                            
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/4952.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="https://github.com/cuixuage/KDDCup2022-ESCI" class="btn btn-secondary" role="button" target="_blank">Code</a>
+                                    <a href="slides/4952.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/4952.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/1Hb9U8ds4VU" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>      <br>                     
+                            <a class="list-group-item list-group-item-action">
+                                <h6>Solution of Team GraphMIRAcles in the KDD Cup 2022 Query-Product Ranking Task</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span><br>
+                                Authors: Hanzhu Chen, Zhihao Shi, Zhanqiu Zhang and Jie Wang.                            
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/3439.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/3439.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/3439.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/SrmOFzJraPE" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a> <br>
+                            <a class="list-group-item list-group-item-action ">
+                                <h6>CMB AI Lab at KDD Cup 2022 ESCI Task2 and Task3: A Domain Adapted PLM with Context Enhancement for Query-Product Classification</h6>
+                                &nbsp;<span class="badge alert-danger">Task 2</span> 
+                                &nbsp;<span class="badge alert-warning">Task 3</span><br>
+                                Authors: Haobo Yang, Shiding Fu, Guidong Zheng, Junjie Wen, Jinlong Li and Xing Zhao.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/5265.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="https://github.com/yanghb2020/kddcup2022" class="btn btn-secondary" role="button" target="_blank">Code</a>
+                                    <a href="slides/5265.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/Zza0Dr3k6SY" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>        <br>                   
+                            <a class="list-group-item list-group-item-action">
+                                <h6>A simple but effective solution for Task 1 of KDD Cup 2022 Challenge on improving product search</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span><br>
+                                Authors: Jinrui Liang, Yali Shangguan and Zhaohao Liang.                          
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/7539.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/7539.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/7539.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/MYy8XbzYfQc" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>      <br>                     
+                            <a class="list-group-item list-group-item-action">
+                                <h6>A Multi-model Fusion Approach for Product Classification and Product Substitute Identification on Shopping Queries Data</h6>
+                                &nbsp;<span class="badge alert-danger">Task 2</span> 
+                                &nbsp;<span class="badge alert-warning">Task 3</span><br>                                
+                                Authors: Yanbo Wang, Yuhang Guan, Yuming Li, Hui Qin, Sheng Chen, Shilei Shan, Xuan Yang, Jie Shi and Siyi Wang.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/6691.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/6691.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/gs-GzO9mtpg" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>                                                    
+                            <a class="list-group-item list-group-item-action">
+                                <h6>TFKD Solution for KDD Cup 2022 Amazon Product Search</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span><br>
+                                Authors: Cheng Hsu.                             
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/8610.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="https://github.com/ChengHSUHSU/KDD_Cup2022_AmazonProductSearchESCI" class="btn btn-secondary" role="button" target="_blank">Code</a>
+                                    <a href="slides/8610.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/YYh4W1q_siE" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>         <br>                  
+                            <a class="list-group-item list-group-item-action">
+                                <h6>KDD Cup 2022 Multiclass Product Classification: Team MetaSoul Solution</h6>
+                                &nbsp;<span class="badge alert-danger">Task 2</span><br>
+                                Authors: Zhichao Feng, Jiawei Lu, Junwei Cheng, Ke Hou, Kaiyuan Li, Pengfei Wang and Yadong Zhu.                              
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/1507.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="https://github.com/guijiql/kddcup2022" class="btn btn-secondary" role="button" target="_blank">Code</a>
+                                    <a href="slides/1507.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/1507.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/9YZ9m0HOyEk" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>        <br>                                                                                              
+                            <a class="list-group-item list-group-item-action">
+                                <h6>Predicting Query-Item Relationship using Adversarial Training and Robust Modeling Techniques</h6>
+                                &nbsp;<span class="badge alert-warning">Task 3</span><br>
+                                Authors: Min Seok Kim.                                                           
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/0620.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/0620.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="https://youtu.be/KLjV295xKvU" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>   <br>
+                            <a class="list-group-item list-group-item-action">
+                                <h6>A Boring-yet-effective Approach for the Product Ranking Task of the Amazon KDD Cup 2022</h6>
+                                &nbsp;<span class="badge alert-success">Task 1</span><br>
+                                Authors: Vitor Jeronymo, Guilherme Rosa, Surya Kallumadi, Rodrigo Nogueira and Roberto Lotufo.                                                           
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <a href="papers/4982.pdf" class="btn btn-secondary" role="button" target="_blank">Paper</a>
+                                    <a href="slides/4982.pdf" class="btn btn-secondary" role="button" target="_blank">Slides</a>
+                                    <a href="posters/4982.pdf" class="btn btn-secondary" role="button" target="_blank">Posters</a>
+                                    <a href="https://youtu.be/xX_axuRcyNg" class="btn btn-secondary" role="button" target="_blank">Video</a>
+                                </div>
+                            </a>  
+                                                                                                                     
+                        </div>             
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Organizers section-->
+        <section class="bg-light" style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4"  id="organizers">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">ORGANIZERS</h2>
+                        <br><br>
+                        <div class="row">
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://scholar.google.com/citations?user=qSOxydEAAAAJ">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/bing yin.jpg" alt="Bing Yin"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://scholar.google.com/citations?user=qSOxydEAAAAJ"><b>Bing Yin</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="http://chen-luo.com/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/chen luo.jpg" alt="Chen Luo"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="http://chen-luo.com/"><b>Chen Luo</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://haitaomao.github.io/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/chen luo.jpg" alt=""></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://haitaomao.github.io/"><b>Haitao Mao</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://scholar.google.com/citations?user=pNYuJQIAAAAJ&hl=en&oi=ao">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/chen luo.jpg" alt=""></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://scholar.google.com/citations?user=pNYuJQIAAAAJ&hl=en&oi=ao"><b>Hanqing Lu</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://hmjianggatech.github.io/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/haoming jiang.jpg" alt=""></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://hmjianggatech.github.io/"><b>Haoming Jiang</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="http://www.cse.msu.edu/~tangjili/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/jiliang tang.jpg" alt="Jiliang Tang"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="http://www.cse.msu.edu/~tangjili/"><b>Jiliang Tang</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://sites.google.com/site/mailtosuka/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/Karthik Subbian.jpg" alt="Karthik Subbian"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://sites.google.com/site/mailtosuka/"><b>Karthik Subbian</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/chen luo.jpg" alt="Monica Cheng"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href=""><b>Monica Cheng</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://faculty.ist.psu.edu/szw494/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/suhang wang.jpg" alt="Suhang Wang"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://faculty.ist.psu.edu/szw494/"><b>Suhang Wang</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="http://cse.msu.edu/~jinwei2/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/wei jin.jpg" alt="Wei Jin"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="http://cse.msu.edu/~jinwei2/"><b>Wei Jin</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://www.tangxianfeng.net/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/xianfeng tang.jpg" alt="Xianfeng Tang"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://www.tangxianfeng.net/"><b>Xianfeng Tang</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="http://web.cs.ucla.edu/~yzsun/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/yizhou sun.jpg" alt="Yizhou Sun"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="http://web.cs.ucla.edu/~yzsun/"><b>Yizhou Sun</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/chen luo.jpg" alt="Zhen Li"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href=""><b>Zhen Li</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://hsqmlzno1.github.io/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/zheng li.jpg" alt="Zheng Li"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://hsqmlzno1.github.io/"><b>Zheng Li</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                        <div class="mt-5 col-sm-2">
+                            <a class="navbar-brand js-scroll-trigger" href="https://zhengyang-wang.github.io/">
+                            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto" src="./assets/zhengyang wang.jpg" alt="Zhengyang Wang"></span>
+                            <p style="text-align: center;">
+                                <a style="color:#0275d8; text-decoration: none;" target="_blank" href="https://zhengyang-wang.github.io/"><b>Zhengyang Wang</b></a><br>
+                                <!-- <span><i class="fa-solid fa-school"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://vt.edu/">Virginia Tech</a><br>
+                                <span><i class="fa-brands fa-amazon"></i></span>&nbsp;&nbsp;
+                                <a style="color:#E77725; text-decoration: none;" href="https://www.amazon.science/">Amazon Scholar</a> -->
+                            </p>                            
+                            </a>
+                        </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Data section-->
+        <section style="padding-top: 4%; padding-bottom: 4%;">
+            <div class="container px-4" id="data">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <br>
+                        <h2 style="text-align: center;">DATA</h2>
+                        <p>The data and its license is available at the following link.<br>
+                            <a href="https://github.com/amazon-research/esci-code">https://github.com/amazon-research/esci-code</a><br>
+                            If you plan to use this dataset for your own research, please cite this paper.
+                        </p>
+                        <code>
+                            @article{reddy2022shopping,<br>
+                                title={Shopping Queries Dataset: A Large-Scale {ESCI} Benchmark for Improving Product Search},<br>
+                                author={Chandan K. Reddy and Lluís Màrquez and Fran Valero and Nikhil Rao and Hugo Zaragoza and Sambaran Bandyopadhyay and Arnab Biswas and Anlu Xing and Karthik Subbian},<br>
+                                year={2022},<br>
+                                eprint={2206.06588},<br>
+                                archivePrefix={arXiv}<br>
+                          }<br>
+                        </code>
+                        <br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/f3573b1642.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
