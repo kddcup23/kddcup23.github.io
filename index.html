@@ -682,5 +682,14 @@
         <script src="https://kit.fontawesome.com/f3573b1642.js" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            
+            window.addEventListener("resize", () => {
+                const doms = document.getElementsByClassName("img-fluid");
+                const width = doms[0].clientWidth;
+                console.log(width)
+            })
+
+        </script>
     </body>
 </html>
